@@ -8,6 +8,8 @@ For more information on how to configure the export :
 
 Analytics data might need **several minutes** to flow from AppCenter to Application Insights. Please be patient the first time you do your tests.
 
+![Demo application](images/demo-app.png)
+
 ## Application Insights
 
 This is a sample request that can be used to query the data in Application Insights.
