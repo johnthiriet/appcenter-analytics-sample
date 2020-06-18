@@ -22,7 +22,7 @@ customEvents
 | project city, color, aggregated_color
 ```
 
-[Application Insights query results](images/application-insights.png)
+![Application Insights query results](images/application-insights.png)
 
 
 ## PowerBI
