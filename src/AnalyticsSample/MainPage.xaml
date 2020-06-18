@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    mc:Ignorable="d"
+    x:Class="AnalyticsSample.MainPage"
+    ios:Page.UseSafeArea="true"
+    Visual="Material"
+    BackgroundColor="White">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="TextColor">#293847</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Orientation="Vertical" Spacing="30">
+        <Label Text="Analytics Quizz" Margin="0,20,0,0"
+               HorizontalOptions="Fill"
+               FontSize="Title"
+               HorizontalTextAlignment="Center"
+               HeightRequest="60"
+               TextColor="{StaticResource TextColor}"/>
+        <Label Text="Where are you from?" HorizontalOptions="CenterAndExpand" FontSize="Subtitle" TextColor="{StaticResource TextColor}" />
+        <Grid HorizontalOptions="Fill" Margin="20,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ImageButton x:Name="beijingBtn" Grid.Column="0" Clicked="OnCityClicked" Source="beijing_cctv_building" Aspect="AspectFill" />
+            <ImageButton x:Name="parisBtn" Grid.Column="1" Clicked="OnCityClicked" Source="Eiffel_Tower_in_Spring" Aspect="AspectFill"/>
+            <ImageButton x:Name="seattleBtn" Grid.Column="2" Clicked="OnCityClicked" Source="Seattle_Space_needle" Aspect="AspectFill" />
+        </Grid>
+        <Label Text="What is your favorite color?" HorizontalOptions="CenterAndExpand" FontSize="Subtitle" TextColor="{StaticResource TextColor}" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button Text="Red" Clicked="OnColorButtonClicked" BackgroundColor="#e9431a" />
+            <Button Text="Green" Clicked="OnColorButtonClicked" BackgroundColor="#5bbfae" />
+            <Button Text="Blue" Clicked="OnColorButtonClicked" BackgroundColor="#649bd1" />
+        </StackLayout>
+        <Button Text="Submit" Clicked="OnSubmitButtonClicked" Margin="40" BackgroundColor="{StaticResource TextColor}" />
+    </StackLayout>
+</ContentPage>
